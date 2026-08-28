@@ -1,7 +1,7 @@
 "use client"
-import SmartDoc from '@/components/custom/dashboard/workspace/SmartDoc'
-import Whiteboard from '@/components/custom/dashboard/workspace/Whiteboard'
-import WorkspaceHeader from '@/components/custom/dashboard/workspace/WorkspaceHeader'
+import SmartDoc from '@/components/custom/workspace/SmartDoc'
+import Whiteboard from '@/components/custom/workspace/Whiteboard'
+import WorkspaceHeader from '@/components/custom/workspace/WorkspaceHeader'
 import React, { useState } from 'react'
 
 function Workspace () {
