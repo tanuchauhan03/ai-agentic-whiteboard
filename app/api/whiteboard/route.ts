@@ -1,4 +1,4 @@
-import Whiteboard from "@/components/custom/dashboard/workspace/Whiteboard";
+import Whiteboard from "@/components/custom/workspace/Whiteboard";
 import { db, WhiteboardData } from "@/db";
 import { currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
