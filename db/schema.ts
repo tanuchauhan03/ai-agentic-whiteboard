@@ -1,4 +1,6 @@
-import { integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+// import { id } from "date-fns/locale";
+// import { varchar } from "drizzle-orm/mysql-core";
+import { integer, pgTable, serial, text, timestamp,varchar } from "drizzle-orm/pg-core";
 
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
@@ -7,13 +9,20 @@ export const users = pgTable("users", {
   credits:integer('credits').default(3),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
-
-export const posts = pgTable("posts", {
+export const projects=pgTable('projects',{
   id: serial("id").primaryKey(),
-  title: text("title").notNull(),
-  content: text("content"),
-  authorId: serial("author_id").references(() => users.id),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-});
+  projectId: varchar('projectID').notNull().unique(),
+  projectName: varchar('projectName').notNull(),
+  userEmail: varchar('userEmail').notNull(),
+  createdAt: timestamp("Created_at").defaultNow().notNull()
+})
+
+// export const posts = pgTable("posts", {
+//   id: serial("id").primaryKey(),
+//   title: text("title").notNull(),
+//   content: text("content"),
+//   authorId: serial("author_id").references(() => users.id),
+//   createdAt: timestamp("created_at").defaultNow().notNull(),
+// });
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
