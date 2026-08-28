@@ -28,7 +28,9 @@ export function AppSidebar() {
         </SidebarHeader>
       <SidebarContent>
         <SidebarGroup >
-           <Button>+Create New Board</Button>
+           <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-5">
+                       + Create New Board
+                     </Button>
         </SidebarGroup >
         <SidebarGroup >
             <SidebarGroupLabel>My Boards</SidebarGroupLabel>
@@ -64,10 +66,12 @@ export function AppSidebar() {
 
       </SidebarContent>
       <SidebarFooter >
-        <Button>+ Create New Board</Button>
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-5">
+                    + Create New Board
+                  </Button>
         <div className="p-4 my-3 border rounded-md">
         <h2 className="text-sm flex justify-between mb-1">2 files created<span>total 3</span></h2>
-        <Progress value={66} className="h-2 mt-2"/>
+        <Progress value={66} className="h-2 mt-2 "/>
         </div>
         <div className="flex items-center gap-2 p-4 border rounded-md">
             <Image src={user?.imageUrl ?? ''} alt="User Image" width={40} height={40}
